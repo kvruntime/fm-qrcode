@@ -1,0 +1,57 @@
+@import url('./reset.css');
+@import url('./typography.css ');
+
+:root {
+	--color-primary: hsl(0, 0%, 100%);
+	--color-light: hsl(212, 45%, 89%);
+	--color-dark: hsl(220, 15%, 55%);
+	--color-darker: hsl(218, 44%, 22%);
+	--mobile-size: 375px;
+	--desktop-size: 1440px;
+	--b-radius: 15px;
+}
+
+.qrcode-container {
+	background: var(--color-light);
+	padding: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.qrcode {
+	min-width: 250px;
+	max-width: 270px;
+	padding: 10px;
+	background: white;
+	border-radius: var(--b-radius);
+	text-align: center;
+}
+* .qrcode * {
+	vertical-align: middle;
+}
+
+.qrcode__picture {
+	border-radius: var(--b-radius);
+}
+
+.qrcode__heading {
+	font-weight: 700;
+	font-size: 17px;
+	color: var(--color-darker);
+}
+
+.qrcode__text {
+	color: var(--color-dark);
+}
+
+@media screen and (min-width: 375px) {
+	.qrcode-container{
+		vertical-align: middle;
+		max-height: 80vh;
+		max-width: 80vw;
+		margin: 10vh auto;
+		box-shadow: 0 2px 10px var(--color-dark);
+	}
+}

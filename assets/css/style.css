@@ -1,5 +1,14 @@
 @import url('./reset.css');
-@import url('./typography.css ');
+/* TYPOGRAPHY */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+/* BOILERPLATE */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
 
 :root {
 	--color-primary: hsl(0, 0%, 100%);
@@ -11,8 +20,27 @@
 	--b-radius: 15px;
 }
 
-.qrcode-container {
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 15px;
+	font-family: 'Outfit', sans-serif;
+	height: 100vh;
+	margin: 1rem;
 	background: var(--color-light);
+}
+
+picture,
+figure,
+img {
+	width: 100%;
+	max-width: 100%;
+}
+
+/* QRCODE */
+.flex-center{
 	padding: 40px;
 	display: flex;
 	justify-content: center;
@@ -44,14 +72,4 @@
 
 .qrcode__text {
 	color: var(--color-dark);
-}
-
-@media screen and (min-width: 375px) {
-	.qrcode-container{
-		vertical-align: middle;
-		max-height: 80vh;
-		max-width: 80vw;
-		margin: 10vh auto;
-		box-shadow: 0 2px 10px var(--color-dark);
-	}
 }

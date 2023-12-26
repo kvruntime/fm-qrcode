@@ -1,0 +1,75 @@
+/* @import url('assets/css/reset.css'); */
+/* TYPOGRAPHY */
+@import url("/public/css/reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+/* BOILERPLATE */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+:root {
+	--color-primary: hsl(0, 0%, 100%);
+	--color-light: hsl(212, 45%, 89%);
+	--color-dark: hsl(220, 15%, 55%);
+	--color-darker: hsl(218, 44%, 22%);
+	--mobile-size: 375px;
+	--desktop-size: 1440px;
+	--b-radius: 15px;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 15px;
+	font-family: 'Outfit', sans-serif;
+	height: 100vh;
+	margin: 1rem;
+	background: var(--color-light);
+}
+
+picture,
+figure,
+img {
+	width: 100%;
+	max-width: 100%;
+}
+
+/* QRCODE */
+.flex-center{
+	padding: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.qrcode {
+	min-width: 250px;
+	max-width: 270px;
+	padding: 10px;
+	background: white;
+	border-radius: var(--b-radius);
+	text-align: center;
+}
+* .qrcode * {
+	vertical-align: middle;
+}
+
+.qrcode__picture {
+	border-radius: var(--b-radius);
+}
+
+.qrcode__heading {
+	font-weight: 700;
+	font-size: 17px;
+	color: var(--color-darker);
+}
+
+.qrcode__text {
+	color: var(--color-dark);
+}
